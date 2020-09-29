@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Burger
+
+This project is the practice of the course https://www.udemy.com/course/react-the-complete-guide-incl-redux/. Thanks to Maximilian Schwarzmüller https://linkedin.com/in/maximilian-schwarzm%C3%BCller-66b152a5.
+
+The code is updated to september 2020.
+
+Site firebase: https://react-burger-rx.web.app/
 
 ## Available Scripts
 
