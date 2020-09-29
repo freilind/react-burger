@@ -41,6 +41,7 @@ export const checkAuthTimeout = (expirationTime) => {
 };
 
 export const auth = (email, password, isSignup) => {
+    const apiKey ='';
     return dispatch => {
         dispatch(authStart());
         const authData = {
@@ -48,9 +49,9 @@ export const auth = (email, password, isSignup) => {
             password: password,
             returnSecureToken: true
         };
-        let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyA-bxlWZVrQT7SbiNr9rtKemFMmxBH7aNI';
+        let url = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${apiKey}`;
         if (!isSignup) {
-            url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA-bxlWZVrQT7SbiNr9rtKemFMmxBH7aNI';
+            url = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${apiKey}`;
         }
         axios.post(url, authData)
             .then(response => {
